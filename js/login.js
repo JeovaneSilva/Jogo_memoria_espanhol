@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-  
+document.getElementById("anoAtual").textContent = new Date().getFullYear();
 
 
 input.addEventListener('input', validateInput);
