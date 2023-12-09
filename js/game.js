@@ -52,15 +52,11 @@ function finalizarJogo() {
   const nome = localStorage.getItem('nome');
   const tempo = localStorage.getItem('tempo');
 
-  // Recupera a lista de registros do Local Storage ou cria uma nova se não existir
   const historico = JSON.parse(localStorage.getItem('historico')) || [];
 
-  // Adiciona o novo registro à lista
   historico.push({ nome, tempo });
 
-  // Atualiza o histórico no Local Storage
   localStorage.setItem('historico', JSON.stringify(historico));
-
   
   window.location = '../index.html';
 }
@@ -71,27 +67,8 @@ const checkCards = () => {
   const firstCharacter = firstCard.getAttribute('data-character');
   const secondCharacter = secondCard.getAttribute('data-character');
 
-  if (firstCharacter == 1 && secondCharacter == 2 ||
-    firstCharacter == 3 && secondCharacter == 4 || 
-    firstCharacter == 5 && secondCharacter == 6 || 
-    firstCharacter == 7 && secondCharacter == 8 || 
-    firstCharacter == 9 && secondCharacter == 10 || 
-    firstCharacter == 11 && secondCharacter == 12 ||
-    firstCharacter == 13 && secondCharacter == 14 ||
-    firstCharacter == 15 && secondCharacter == 16 || 
-    firstCharacter == 17 && secondCharacter == 18 ||
-    firstCharacter == 19 && secondCharacter == 20 ||
-    firstCharacter == 2 && secondCharacter == 1 ||
-    firstCharacter == 4 && secondCharacter == 3 || 
-    firstCharacter == 6 && secondCharacter == 5 || 
-    firstCharacter == 8 && secondCharacter == 7 || 
-    firstCharacter == 10 && secondCharacter == 9 || 
-    firstCharacter == 12 && secondCharacter == 11 ||
-    firstCharacter == 14 && secondCharacter == 13 ||
-    firstCharacter == 16 && secondCharacter == 15 ||
-    firstCharacter == 18 && secondCharacter == 17 ||
-    firstCharacter == 20 && secondCharacter == 19
-       ) {
+  if (firstCharacter == secondCharacter-1 && firstCharacter%2 !== 0 && secondCharacter%2 == 0 || 
+    firstCharacter-1 == secondCharacter && firstCharacter%2 == 0 && secondCharacter&2 !== 0) {
 
     firstCard.firstChild.classList.add('disabled-card');
     secondCard.firstChild.classList.add('disabled-card');
