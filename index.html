@@ -14,7 +14,15 @@
 </head>
 <body>
 
-  
+  <header class="header">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#jogo">JOGO</a></li>
+      <li><a href="#rank">RANKING</a></li>
+      <li><a href="#regras">REGRAS</a></li>
+    </ul>
+  </header>
+
     <main class="main">
         <h1>Heterossemânticos</h1>
         <p>Os falsos cognatos, falsos amigos ou heterossemânticos são palavras cujas grafias e/ou pronúncias são iguais ou semelhantes em português e espanhol, mas com significados diferente. A seguir temos uma apresentação de algumas palavras heterossemânticas seguida de um jogo da memória sobre as mesmas palavras.</p>
@@ -24,18 +32,18 @@
     </main>
 
 
-        <section class="jogo">
+        <section class="jogo" id="jogo">
           <form class="login-form">
               <div class="login__header">
                 <h1>Juego de Memoria</h1>
               </div>
           
-              <input type="text" placeholder="Nombre" class="login__input">
-              <button type="submit" class="login__button" disabled>Comenzar</button>
+              <input type="text" placeholder="Nome" class="login__input">
+              <button type="submit" class="login__button" disabled>Começar</button>
           
           </form>
 
-            <div class="rank">
+            <div class="rank" id="rank">
               <h1>Ranking</h1>
 
               <table class="historico">
@@ -56,7 +64,7 @@
 
         </section>
 
-          <section class="regras">
+          <section class="regras" id="regras">
             <div class="lista-regras">
               <h1>Regras</h1>
               <ul>

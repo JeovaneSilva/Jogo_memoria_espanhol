@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-    --font-merienda: 'Merienda';
     --font-roboto: 'Roboto';
     --cor1: #024059;
     --cor2: #026873;
@@ -22,6 +21,32 @@ html{
 }
 
 
+/* header */
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor1);
+  height: 70px;
+}
+
+.header ul{
+  display: flex;
+  gap: 60px;
+}
+
+.header ul li{
+  list-style-type: none;
+}
+
+.header ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* main */
 .main{
     width: 100vw;
     display: flex;
@@ -30,6 +55,7 @@ html{
     flex-direction: column;
     background-color: var(--cor5);
     padding: 20px;
+    margin-top: 5em;
 }
 
 .main h1{
@@ -37,10 +63,10 @@ html{
 }
 
 .main p{
-  padding-top: 1em;
+  padding: 1em 0 3em 0;
   font-size: 1.5em;
   width: 950px;
-  text-align: justify;
+  text-align: center;
 }
 
 iframe{ 
@@ -80,6 +106,7 @@ iframe{
     color: #333;
     font-size: 2em;
     font-family: var(--font-roboto);
+    text-transform: uppercase;
   }
   
   .login__input {
@@ -125,6 +152,7 @@ iframe{
   text-align: center;
   font-size: 2em;
   text-transform: uppercase;
+  color: #333;
 }
 
 table {
@@ -184,6 +212,7 @@ th, td {
     .main p{
       width: 550px;
       font-size: 17px;
+      text-align: justify;
     }
 
     .regras .lista-regras{
@@ -219,6 +248,15 @@ th, td {
 
 
   @media (max-width: 650px){
+
+    .header ul{
+      display: flex;
+      gap: 30px;
+    }
+    
+    .header ul li a{
+      font-size: 15px;
+    }
 
     .jogo .rank h1{
       font-size: 1.7em;
