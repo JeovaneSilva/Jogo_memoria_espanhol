@@ -253,3 +253,14 @@ th, td {
   }
 
   }
+
+  @media (max-width: 450px){
+    .main p{
+      width: 300px;
+      font-size: 13px;
+    }
+
+    .main iframe{
+      width: 80%;
+    }
+  }
