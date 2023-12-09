@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --font-merienda: 'Merienda';
+    --font-roboto: 'Roboto';
+    --cor1: #024059;
+    --cor2: #026873;
+    --cor3: #04BF8A;
+    --cor4: #025940;
+    --cor5: #03A64A;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+  background-color: var(--cor5);
+}
+
+
+.main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor5);
+    padding: 20px;
+}
+
+.main h1{
+  font-size: 2.5em;
+}
+
+.main p{
+  padding-top: 1em;
+  font-size: 1.5em;
+  width: 950px;
+  text-align: justify;
+}
+
+iframe{ 
+  margin-top: 5em;
+}
+   
+
+/* form */
+.jogo{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--cor5);
+  padding: 20px;
+}
+
+.login-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 9em;
+  }
+  
+  .login__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  
+  .login__header h1 {
+    color: #333;
+    font-size: 2em;
+    font-family: var(--font-roboto);
+  }
+  
+  .login__input {
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+    max-width: 300px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    font-family: var(--font-roboto);
+  }
+  
+  .login__button {
+    background-color: #00b5cc;
+    border: 3px solid #b2df28;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 300px;
+    padding: 15px;
+    width: 100%;
+    font-family: var(--font-roboto);
+    font-weight: bold;
+  }
+  
+  .login__button:disabled {
+    background-color: #eee;
+    border: 2px solid #969595;
+    color: #aaa;
+    cursor: auto;
+  }
+
+/* ranking */
+.rank{
+  margin: 4em 0;
+}
+
+.rank h1{
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+table {
+  width: 600px;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+/* regras */
+  .regras{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor5);
+    padding: 20px;
+  }
+
+  .regras .lista-regras{
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    border-radius: 15px;
+  }
+
+  .regras h1{
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
+  .regras ul{
+    padding-left: 20px;
+  }
+
+  .regras ul li{
+    list-style-type: decimal;
+    padding-top: 10px;
+  }
+
+
+  @media (max-width: 1000px){
+
+    .main h1{
+      font-size: 2em;
+    }
+
+    .main p{
+      width: 550px;
+      font-size: 17px;
+    }
+
+    .regras .lista-regras{
+      width: 600px;
+    }
+
+    .regras h1{
+      font-size: 1.5em;
+    }
+
+    .regras ul li{
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    iframe{ 
+      width: 80%;
+    }
+
+  }
+
+
+  @media (max-width: 760px){
+    .main h1{
+      font-size: 25px;
+    }
+
+    .main p{
+      width: 350px;
+      font-size: 15px;
+    }
+  }
+
+
+  @media (max-width: 650px){
+
+    .jogo .rank h1{
+      font-size: 1.7em;
+    }
+
+    .jogo .rank .historico {
+      width: 350px;
+    }
+  
+    .regras .lista-regras{
+      width: 350px;
+    }
+
+    .regras .lista-regras{
+      font-size: 0.6em;
+    }
+
+    .regras .lista-regras ul li{
+      font-size: 10px;
+    }
+
+    iframe{ 
+      width: 50%;
+      height: 300px;
+    }
+
+  }
+
+  @media (max-width: 530px){
+    .main .inicio h1{
+      font-size: 30px;
+  }
+
+  }
