@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root{
+  --font-roboto: 'Roboto';
+  --cor1: #411b80;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -8,31 +13,21 @@ main {
     align-items: center;
     justify-content: center;
     padding: 20px 20px 50px;
-    background-color: #03A64A;
-    font-family: 'Roboto';
+    font-family: var(--font-roboto);
   }
   
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--cor1);
+    color: white;
     font-size: 1.2em;
     width: 100%;
     max-width: 800px;
     padding: 30px;
     margin: 0 0 30px;
     border-radius: 5px;
-  }
-
-  header #voltar{
-    display: none;
-    background-color: #03A64A;
-    padding: 10px;
-    border-radius: 15px;
-    width: 100px;
-    font-size: 15px;
-    font-weight: bold;
   }
   
   .grid {

@@ -51,3 +51,41 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 input.addEventListener('input', validateInput);
 
 
+// Slider
+document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll('.slides img');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+          if (i === index) {
+              slide.style.display = 'block';
+          } else {
+              slide.style.display = 'none';
+          }
+      });
+  }
+
+  function nextSlide() {
+      currentSlide++;
+      if (currentSlide >= slides.length) {
+          currentSlide = 0;
+      }
+      showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+      currentSlide--;
+      if (currentSlide < 0) {
+          currentSlide = slides.length - 1;
+      }
+      showSlide(currentSlide);
+  }
+
+  document.querySelector('.next').addEventListener('click', nextSlide);
+  document.querySelector('.prev').addEventListener('click', prevSlide);
+
+  showSlide(currentSlide);
+});
+
+
